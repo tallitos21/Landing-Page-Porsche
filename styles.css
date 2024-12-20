@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cor-principal: #DCDDDC;
+    --cor-secundaria: #7a7a7c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+}
+
+.principal {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(#bebebe, #7a7a7c);
+    padding: 30px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.principal::before {
+    content: 'PERFORMANCE';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9vw;
+    font-weight: 600;
+    color: rgba(255, 230, 255, 0.4);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 80px;
+}
+
+.navegacao {
+    display: flex;
+}
+
+.navegacao li {
+    list-style: none;
+}
+
+.navegacao li a {
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+    margin-left: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.navegacao li a:hover {
+    color: #7a7a7c;
+}
+
+.conteudo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    z-index: 1;
+}
+
+.conteudo h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #352d2db4;
+    text-align: center;
+}
+
+.conteudo h2 span {
+    font-weight: 800;
+    color: #161515b4;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #7a7a7c;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+
+.botao:hover {
+    transform: scale(1.10);
+}
+
+.img-turbo-s {
+    max-width: 60%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+}
+
+.footer li {
+    list-style: none;
+}
+
+.footer li a {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+
+.footer li a:hover {
+    color: #46464b;
+}
+
+.dots {
+    display: flex;
+}
+
+.dots .dot {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots .dot.active {
+    background: #525257;
+}
+
+.slider .slides {   
+    position: absolute;
+    top: 60%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.slider .slides.active {
+    opacity: 1;
+    top: 50%;
+}
+
+.slider .slides h2 {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.slider .slides h2:last-child {
+    text-align: end;
+}
+
+.slider .slides h2 span {
+    color: #303044;
+    font-weight: 400;
+}
